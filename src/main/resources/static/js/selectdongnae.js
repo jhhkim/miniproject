@@ -1,3 +1,5 @@
+//https://ktae23.tistory.com/192
+
 $(document).ready(function(){
      // 자바스크립트에서 타임리프 변수를 사용하기 위해 CData 태그를 주석처리한채로 사용한다.
         /*<![CDATA[*/

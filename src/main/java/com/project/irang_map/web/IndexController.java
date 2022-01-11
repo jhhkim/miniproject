@@ -2,11 +2,13 @@ package com.project.irang_map.web;
 
 import java.util.List;
 
+import com.project.irang_map.dto.KidsmapDto;
 import com.project.irang_map.dto.KidsmapListResponseDto;
 import com.project.irang_map.service.KidsmapService;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.ui.Model;
 import lombok.RequiredArgsConstructor;
 
@@ -23,6 +25,17 @@ public class IndexController {
     public List<KidsmapListResponseDto> kidsmapFindAll() {
         return kidsmapService.findAll();
     }
+
+
+    @GetMapping("/api/v1/search")
+    public String search(@RequestParam(value="keyword") String keyword, Model model){
+        List<KidsmapDto> kidsmapDtoList = kidsmapService.searchPosts(keyword);
+        model.addAttribute("kidsmapList", kidsmapDtoList);
+
+        return "kidsmap";
+    }
+
+
 
     @GetMapping("/login")
     public String login()
