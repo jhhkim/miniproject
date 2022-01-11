@@ -1,0 +1,36 @@
+{{>layout/header}}
+    <br><br>여기에 지도를 띄우고싶음<br><br>
+    <div id="map" style="width:500px;height:400px;"></div>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=153434e592fa10a5ebecb3d7cfb9cc22"></script>
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
+    <script src="/js/Kidsmap.js"></script>
+    <!--메뉴창이 제일 위로 나오게 해야함
+        지금 지도가 맨 위에 올라가있음!-->
+
+<br><br><br>
+
+<table class="tabel table-hover">
+    <thead>
+        <tr>
+            <th>번호</th>
+            <th>가게이름</th>
+            <th>주소</th>
+            <th>업종</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#kidsmap}}
+        <tr style="cursor:pointer">
+            <td>{{id}}</td>
+            <td>{{store}}</td>
+            <td>{{addr}}</td>
+            <td>{{category}}</td>
+        </tr>
+       
+        {{/kidsmap}}
+      </tbody>
+</table>
+
+
+
+{{>layout/footer}}

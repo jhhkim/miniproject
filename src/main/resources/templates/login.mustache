@@ -1,0 +1,44 @@
+{{>layout/header}}
+
+
+    <h2 id="logintitle">Login</h2>
+    <form method="post">
+
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+           
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <button id="loginbtn" type="submit">Login</button>
+            <button id="signupbtn" onclick="document.getElementById('id01').style.display='block'">Sign Up</button>
+        </div>
+    </form>
+    
+    <div id="id01" class="modal">
+        
+    <form method="post" action="#">
+        <div class="modal-content animate">
+            
+            <div class="imgcontainer">
+                <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+            </div>
+            <div class="container">
+                
+                <label for="email"><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+            
+                <label for="psw"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="psw" required>
+            
+                <label for="psw-repeat"><b>Repeat Password</b></label>
+                <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                
+                <button type="submit" class="signupformbtn" id="signupbtn">Sign Up</button>
+            </div>
+        </div>
+    </form>
+    </div>
+ <script src="/js/signupmodal.js"></script>
+{{>layout/footer}}
