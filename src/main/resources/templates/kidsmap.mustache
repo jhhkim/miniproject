@@ -1,12 +1,15 @@
 {{>layout/header}}
-<!--    <div class="selectdongnae">
-    <form>
+<div class="selectdongnae">
+    
     <h3 style="text-align: center;">지역을 선택하세요</h3>
-    <select id="sido" name="sido">
-        <option>시 도를 선택하세요</option>
+    
+    <form>
+        <select id="sido" name="sido">
+        <option value="">시 도를 선택하세요</option>
+        
         <option value="26">부산시</option>
     </select>
-    <select id="gungu" name="gungu">
+    <select id="gugun" name="gugun">
         <option> 구 군을 선택하세요</option>
         <option value="44">강서구</option>
         <option value="41">금정구</option>
@@ -27,17 +30,8 @@
     </select>
         <input type="submit" value="확인">
     </form>
-    </div>  !-->
+</div>
 
-    <!--https://velog.io/@max9106/Spring-Boot-JPA-MySQL-%EA%B2%80%EC%83%89%EA%B8%B0%EB%8A%A5!-->
-
-<!--일단 입력받은 주소로 db에서 데이터 가져와서 보여주려고했는데 localhost연결거부 contoller에서 return값을 kidsmap으로 준게 2개라서?!-->
-    <form action="/board/search" method="get">
-        <div class="search">
-            <input name="keyword" type="text" placeholder="주소를 입력해주세요">
-        </div>
-        <button>검색하기</button>
-    </form>
 
     <div class="mapcontainer">
         <div id="map" style="width: 500px; height: 400px;"></div>

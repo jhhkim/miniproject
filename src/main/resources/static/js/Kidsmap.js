@@ -1,3 +1,6 @@
+
+
+//카카오맵
 var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
     mapOption = {
         center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
@@ -9,7 +12,7 @@ var map = new kakao.maps.Map(mapContainer, mapOption);
 
 // 주소-좌표 변환 객체를 생성합니다
 var geocoder = new kakao.maps.services.Geocoder();
-//주소sql파일에서 가져오고싶음, 페이지 실행할때마다 실시간으로 띄우지말고 이미지로 떠놓으면?
+//주소sql파일에서 가져오고싶음
 //카카오맵api 해보기에서는 코드 작동됨 그런데 마커 한번에 띄우느라 시간 오래걸림
 var address=['부산시 강서구 범방동 1901-10',
 '부산시 강서구 신호동 262-9',
