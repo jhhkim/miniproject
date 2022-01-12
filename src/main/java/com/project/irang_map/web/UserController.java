@@ -15,6 +15,11 @@ import lombok.RequiredArgsConstructor;
 public class UserController {
     private final MemberService memberService;
 
+    @GetMapping("/login")
+    public String login(){
+        return "login";
+    }
+
     @GetMapping("/login/error")
     public String loginError(Model model)
     {   
@@ -33,6 +38,6 @@ public class UserController {
     public String registerUser(SignupRequestDto requestDto) {
         System.out.println("관리자? " + requestDto.isAdmin());
         memberService.registerUser(requestDto);
-        return "redirect:/login";
+        return "redirect:/user/login";
     }
 }
