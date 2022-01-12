@@ -25,14 +25,9 @@ public class IndexController {
         return kidsmapService.findAll();
     }
 
-
-    
-
-
-
+    //UserController에 loginerror signup mapping
     @GetMapping("/login")
-    public String login()
-    {
+    public String login(){
         return "login";
     }
     
