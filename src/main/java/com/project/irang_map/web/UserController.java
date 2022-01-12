@@ -33,11 +33,12 @@ public class UserController {
     // {
     //     return "signup";
     // }
+    
     //회원 가입 요청 처리
     @PostMapping("/join")
     public String registerUser(SignupRequestDto requestDto) {
         System.out.println("관리자? " + requestDto.isAdmin());
         memberService.registerUser(requestDto);
-        return "redirect:/user/login";
+        return "redirect:/login";
     }
 }

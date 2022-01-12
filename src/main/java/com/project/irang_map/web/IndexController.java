@@ -20,10 +20,10 @@ public class IndexController {
         model.addAttribute("kidsmap", kidsmapService.findAll());
         return "kidsmap";
     }
+    
     @GetMapping("/api/v1/kidsmap")
     public List<KidsmapListResponseDto> kidsmapFindAll() {
         return kidsmapService.findAll();
     }
 
-   
 }
