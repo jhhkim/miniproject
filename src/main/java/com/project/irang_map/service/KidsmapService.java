@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 
 import com.project.irang_map.domain.Kidsmap;
 import com.project.irang_map.domain.KidsmapRepository;
+import com.project.irang_map.dto.KidsmapDto;
 import com.project.irang_map.dto.KidsmapListResponseDto;
 
 import org.springframework.stereotype.Service;
@@ -18,9 +19,11 @@ import lombok.RequiredArgsConstructor;
 @Service
 public class KidsmapService {
     private final KidsmapRepository kidsmapRepository;
-    
 
     @Transactional(readOnly = true)
+    public List<KidsmapDto> findAllByAddr(String juso) {
+        return kidsmapRepository.findAllByAddr(juso);
+    }
     public List<KidsmapListResponseDto> findAll() {
         return kidsmapRepository.findAll().stream()
         .map(KidsmapListResponseDto::new)
