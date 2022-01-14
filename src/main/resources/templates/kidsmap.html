@@ -4,7 +4,7 @@
     <h3 style="text-align: center;">지역을 선택하세요</h3>
     <form action="/search" method="post">
         <input type="text" id="juso" name="juso" placeholder="00시 00구">
-        <button type="submit">검색</button>
+        <button id="inputbtn" type="submit">검색</button>
     </form>
 <!--
     <form action="/search">
@@ -43,12 +43,11 @@
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=153434e592fa10a5ebecb3d7cfb9cc22"></script>
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=APIKEY&libraries=services,clusterer,drawing"></script>
     <script src="/js/Kidsmap.js"></script>
-    <script src="/js/selectdongnae.js"></script>
     <!--메뉴창이 제일 위로 나오게 해야함
         지금 지도가 맨 위에 올라가있음!-->
 
 
-<!--<table class="tabel table-hover">
+<table class="tabel table-hover">
     <thead>
         <tr>
             <th>번호</th>
@@ -69,7 +68,5 @@
         {{/kidsmap}}
       </tbody>
 </table>
-
-!-->
 
 {{>layout/footer}}

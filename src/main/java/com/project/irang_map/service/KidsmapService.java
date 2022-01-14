@@ -22,7 +22,7 @@ public class KidsmapService {
 
     @Transactional(readOnly = true)
     public List<KidsmapDto> findAllByAddr(String juso) {
-        return kidsmapRepository.findAllByAddr(juso);
+        return kidsmapRepository.findAllByAddrLike(juso);
     }
     public List<KidsmapListResponseDto> findAll() {
         return kidsmapRepository.findAll().stream()
