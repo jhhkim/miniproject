@@ -21,9 +21,12 @@ public class KidsmapService {
     private final KidsmapRepository kidsmapRepository;
 
     @Transactional(readOnly = true)
-    public List<KidsmapDto> findAllByAddr(String juso) {
-        return kidsmapRepository.findAllByAddr(juso);
+    public List<KidsmapListResponseDto> findAllByAddr(String juso) {
+        return kidsmapRepository.findByAddrLike(juso).stream()
+                .map(KidsmapListResponseDto::new)
+                .collect(Collectors.toList());
     }
+
     public List<KidsmapListResponseDto> findAll() {
         return kidsmapRepository.findAll().stream()
         .map(KidsmapListResponseDto::new)
